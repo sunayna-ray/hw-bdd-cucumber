@@ -40,6 +40,6 @@ end
 
 Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
-  rows=page.all(:css, 'table tr').size - 1 #(Remove forst header row in count to get number of movies)
+  rows=page.all('table tr').size - 1 #(Remove first header row in count to get number of movies)
   expect(rows).to eq Movie.count
 end
